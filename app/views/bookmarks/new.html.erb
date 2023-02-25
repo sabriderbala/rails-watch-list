@@ -4,6 +4,7 @@
     <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.input :comment %>
         <%= f.association :movie %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.submit %>
     <% end %>
     <div class="d-flex justify-content-end"><%= link_to "Back to all list", lists_path, class: 'btn btn-flat' %></div>
